@@ -1,0 +1,125 @@
+@import "style.css";
+
+nav {
+    position: fixed;
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-dark);
+    box-shadow: 0 0 3px black;
+    z-index: 9;
+}
+
+
+
+nav h1 {
+    margin-left: 20px;
+}
+
+nav ul {
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    float: left;
+    margin-left: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+    color: var(--color-2);
+}
+
+nav li:last-child a {
+    padding: 5px;
+    font-size: inherit;
+    background-color: var(--color-2);
+    border: transparent;
+    border-radius: 5px;
+    color: var(--color-dark);
+}
+
+nav a:hover,
+nav li:last-child a:hover {
+    color: var(--color-1);
+    border-bottom: currentColor 2px solid;
+}
+
+#btn-hamburger {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    
+    .navigation {
+        height: 60px;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+    }
+
+    #nav-menu {
+        width: 100vw;
+        padding-bottom: 20px;
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--color-dark);
+        border-top: var(--color-2) 2px solid;
+        border-bottom: var(--color-1) 3px solid;
+        top: 60px;
+        opacity: 1;
+        transition-property: top, opacity;
+        transition-delay: 0ms, 150ms ;
+        transition-duration: 500ms, 350ms;
+    }
+    
+    #nav-menu.inactive {
+        top: -210px;
+        opacity: 0;
+        transition-property: top, opacity;
+        transition-delay: 0ms, 0ms ;
+        transition-duration: 500ms, 200ms;
+    }
+
+    #nav-menu li,
+    #nav-menu li:last-child a {
+        margin: 5px 0;
+    }
+
+    #btn-hamburger {
+        display: block;
+        margin-left: auto;
+        margin-right: 20px;
+        position: relative;
+    }
+
+    #btn-hamburger,
+    #btn-hamburger::before,
+    #btn-hamburger::after {
+        content: "";
+        height: 4px;
+        width: 30px;
+        background-color: var(--color-2);
+        border: transparent;
+        border-radius: 2px;
+    }
+
+    #btn-hamburger::before,
+    #btn-hamburger::after {
+        position: absolute;
+        left: 0;
+    }
+
+    #btn-hamburger::before {
+        bottom: 200%;
+    }
+
+    #btn-hamburger::after {
+        top: 200%;
+    }
+
+}

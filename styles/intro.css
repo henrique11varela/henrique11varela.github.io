@@ -1,0 +1,32 @@
+@import "style.css";
+
+#intro-screen {
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+}
+
+#intro-screen h1 {
+    font-size: 8vh;
+    color: var(--color-dark);
+}
+
+#intro-screen h1 span {
+    font-size: 15vh;
+    line-height: 12vh;
+    color: var(--color-1);
+    text-shadow: 0px 1px 3px var(--color-dark);
+}
+
+
+
+@media (max-width: 650px) {
+    #intro-screen {
+        
+        background-position-y: 0px;
+    }
+}

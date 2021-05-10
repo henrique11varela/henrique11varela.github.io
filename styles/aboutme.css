@@ -1,0 +1,108 @@
+@import "style.css";
+
+.icons {
+    width: 70vw;
+    margin: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.icons img {
+    height: 5vw;
+    border: transparent 3px solid;
+}
+
+.icons img:hover {
+    border: var(--color-2) 3px solid;
+    border-radius: 1vw;
+}
+
+#aboutme-screen .container {
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+#me {
+    margin: 14px;
+    height: 35vw;
+    width: 35vw;
+    background-image: url("../images/me.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#info-aboutme {
+    width: 35vw;
+}
+
+#btn-moreaboutme {
+    float: right;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: transparent 3px solid;
+    font-size: inherit;
+    color: var(--color-1);
+    cursor: pointer;
+}
+
+#btn-moreaboutme:hover {
+    border-bottom: currentColor 3px solid;
+}
+
+#popup-moreaboutme {
+    width: 70vw;
+    display: flex;
+}
+
+#popup-moreaboutme.inactive {
+    display: none;
+}
+
+#popup-moreaboutme p {
+    margin: 20px;
+}
+
+@media (max-width: 650px) {
+
+    .icons {
+        width: 90vw;
+        flex-wrap: wrap;
+    }
+
+    .icons img {
+        height: 5vh;
+    }
+
+    #aboutme-screen .container {
+        flex-direction: column;
+    }
+
+    #me {
+        width: 85vw;
+        height: 85vw;
+    }
+
+    #info-aboutme {
+        width: 85vw;
+    }
+
+    #popup-moreaboutme {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #popup-moreaboutme div {
+        width: 80vw;
+    }
+
+    #popup-moreaboutme h3 {
+        font-size: 4vh;
+    }
+}

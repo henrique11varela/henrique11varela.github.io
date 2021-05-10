@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+
+
+:root {
+    --color-light: #f1f2da;
+    --color-dark: #00303b;
+    --color-1: #ff7777;
+    --color-2: #ffce96;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans Condensed', Helvetica, sans-serif;
+    /*font-family: 'Open Sans', Helvetica, sans-serif;*/
+}
+
+body {
+    background-color: var(--color-dark);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 25px;
+    color: var(--color-2);
+}
+
+h2 {
+    font-size: 40px;
+    color: var(--color-1);
+    margin: 10px;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 2.5vw;
+    color: var(--color-2);
+    text-align: center;
+}
+
+p {
+    font-size: 2vw;
+    color: var(--color-light);
+    text-align: justify;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+u {
+    text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+
+    h3 {
+        font-size: 5vh;
+    }
+
+    p {
+        font-size: 3vh;
+    }
+
+}
+

@@ -1,0 +1,124 @@
+@import "style.css";
+
+#intro-screen {
+    height: 100vh;
+}
+
+#intro-screen h1 {
+    position: relative;
+    top: calc(60px + 3vh);
+}
+
+.flag-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.flag,
+.flag::before,
+.flag::after {
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+    position: relative;
+}
+
+.flag {
+    border: var(--color-dark) 1.5vh solid;
+}
+
+
+
+#pt {
+    background-color: red;
+}
+
+#pt::before,
+#pt::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#pt::before {
+    background-color: green;
+    clip-path: polygon(0 0 , 40% 0, 40% 100%, 0 100%);
+}
+
+#pt::after {
+    background-color: yellow;
+    clip-path: circle(20% at 40% 50%);
+}
+
+
+
+#en {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background-color: blue;
+}
+
+#en .inner1::before,
+#en .inner1::after {
+    content: " ";
+}
+
+#en .inner1 {
+    height: 5vh;
+    width: 30vh;
+    position: absolute;
+    background-color: red;
+    border-top: white 1vh solid;
+    border-bottom: white 1vh solid;
+}
+
+#en .inner1:nth-child(1) {
+    transform: rotate(45deg);
+    height: 3vh;
+}
+
+#en .inner1:nth-child(2) {
+    transform: rotate(135deg);
+    height: 3vh;
+}
+
+#en .inner1:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+#en .inner1:last-child {
+    transform: rotate(90deg);
+    border: transparent;
+}
+
+
+@media (max-width: 650px) {
+
+    .flag,
+    .flag::before,
+    .flag::after {
+        height: 30vw;
+        width: 30vw;
+    }
+
+    .flag {
+        border: var(--color-dark) 1.5vw solid;
+    }
+
+    #en .inner1 {
+        height: 5vw;
+        width: 30vh;
+        border-top: white 1vw solid;
+        border-bottom: white 1vw solid;
+    }
+
+    #en .inner1:nth-child(1),
+    #en .inner1:nth-child(2) {
+        height: 3vw;
+    }
+
+}
+

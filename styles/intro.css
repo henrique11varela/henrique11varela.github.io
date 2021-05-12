@@ -29,4 +29,13 @@
         
         background-position-y: 0px;
     }
+
+    #intro-screen h1 {
+        font-size: 15vw;
+    }
+
+    #intro-screen h1 span {
+        font-size: 30vw;
+        line-height: 25vw;
+    }
 }

@@ -9,45 +9,229 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/intro.css">
-    <link rel="stylesheet" href="styles/language.css">
+    <link rel="stylesheet" href="styles/aboutme.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/jobs.css">
+    <link rel="stylesheet" href="styles/contactme.css">
     <title>Henrique Varela</title>
 </head>
 
 <body>
-
     <nav>
         <div class="navigation">
             <h1><a href="#intro-screen">Henrique Varela</a></h1>
+            <button id="btn-hamburger" onclick="activateElement('nav-menu')"></button>
         </div>
+        <ul id="nav-menu" class="inactive">
+            <li>
+                <a href="#intro-screen">Home</a>
+            </li>
+            <li>
+                <a href="#aboutme-screen">About me</a>
+            </li>
+            <li>
+                <a href="#projects-screen">Projects</a>
+            </li>
+            <li>
+                <a href="#jobs-screen">Jobs</a>
+            </li>
+            <li>
+                <a href="#contact-screen">Contact Me</a>
+            </li>
+        </ul>
 
     </nav>
 
 
     <section id="intro-screen" style="background-image: url(images/bg.jpg);">
-
         <h1>Henrique's <br><span>Portfolio</span></h1>
+    </section>
 
-        <div class="flag-container">
 
-            <a href="portuguese.html">
-                <div class="flag" id="pt">
-                    
-                </div>
-            </a>
+    <section id="aboutme-screen">
 
-            <a href="english.html">
-                <div class="flag" id="en">
-                    <div class="inner1"></div>
-                    <div class="inner1"></div>
-                    <div class="inner1"></div>
-                    <div class="inner1"></div>
-                    <div class="inner1"></div>
-                </div>
-            </a>
+        <h2>About me</h2>
+
+        <div class="icons">
+            <div class="icon-container">
+                <a href="https://www.w3schools.com/html/" target="_blank">
+                    <img src="images/icons/html.png" alt="html icon">
+                </a>
+                <a href="https://www.w3schools.com/css/" target="_blank">
+                    <img src="images/icons/css.png" alt="css icon">
+                </a>
+                <a href="https://www.w3schools.com/js/" target="_blank">
+                    <img src="images/icons/javascript.png" alt="javascript icon">
+                </a>
+                <a href="https://www.arduino.cc/" target="_blank">
+                    <img src="images/icons/arduino.png" alt="arduino icon">
+                </a>
+                <a href="https://code.visualstudio.com/" target="_blank">
+                    <img src="images/icons/vscode.png" alt="vscode icon">
+                </a>
+                <a href="https://unity.com/" target="_blank">
+                    <img src="images/icons/unity.png" alt="unity icon">
+                </a>
+                <a href="https://www.ableton.com/en/" target="_blank">
+                    <img src="images/icons/ableton.png" alt="ableton icon">
+                </a>
+            </div>
+            <div class="icon-container">
+                <a href="https://musescore.org/en" target="_blank">
+                    <img src="images/icons/musescore.png" alt="musescore icon">
+                </a>
+                <a href="https://www.adobe.com/products/photoshop.html" target="_blank">
+                    <img src="images/icons/photoshop.png" alt="photoshop icon">
+                </a>
+                <a href="https://www.blackmagicdesign.com/products/davinciresolve/" target="_blank">
+                    <img src="images/icons/resolve.png" alt="resolve icon">
+                </a>
+                <a href="https://www.blender.org/" target="_blank">
+                    <img src="images/icons/blender.png" alt="blender icon">
+                </a>
+                <a href="https://www.autodesk.com/products/autocad/" target="_blank">
+                    <img src="images/icons/autocad.png" alt="autocad icon">
+                </a>
+                <a href="https://ubuntu.com/" target="_blank">
+                    <img src="images/icons/ubuntu.png" alt="ubuntu icon">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="container">
+
+            <div id="me"></div>
+
+            <p id="info-aboutme">
+                Hi, my name is Henrique Varela, I'm a 25 years old code enthusiast. <br>
+                <u>Organized</u>, <u>fast learner</u>, <u>easygoing</u> and <u>adaptable</u> to every situation.
+                <br>
+                <br>
+                I'm portuguese and I've studied Landscape Architecture for about two and a half years, and since
+                then im trying to get my life in order. <br>
+                I started looking into music, coding, soldering and other DIY projects. <br>
+                I'm self-taught at C#, C++, Html, Css and JavaScript.
+                Started studying programming in Atec in June 2022.
+                <br>
+                <button id="btn-moreaboutme" onclick="activateElement('popup-moreaboutme')">More about me</button>
+            </p>
+
+        </div>
+
+        <div id="popup-moreaboutme" class="inactive">
+
+            <div>
+                <h3>Music</h3>
+                <p>I play saxophone (recorded a cd with <em>Banda Filarmónica de Matosinhos</em>), guitar (was part of a
+                    string group called Enfolkados) and im self-taught in piano.
+                </p>
+            </div>
+
+            <div>
+                <h3>Code</h3>
+                <p>I started coding on my TI-86 to make minigames in class. Some years later I stumbled across microcontrollers and decided to learn how to code and solder to build a Midi controller. After that adventure, I heard about Game jams, thought it could be fun so I learned C# and Unity. Now I'm exploring the front-end side of things to build my portfolio and studying programming in a course to try and find a fullfiling job in the area.
+                </p>
+            </div>
 
         </div>
 
     </section>
+
+
+    <section id="projects-screen">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+
+            <!--Midi16-->
+            <a class="card" href="https://henrique11varela.github.io/Midi16">
+                <img src="images/projects/Midi16.jpg" alt="Arduino Midi Controller">
+                <h3>WIP Midi16</h3>
+                <p>Arduino MIDI controller copying the Midi Fighter 3D</p>
+            </a>
+            <!--Portfolio-->
+            <a class="card" href="#">
+                <img src="images/bg.jpg" alt="This webpage" style="object-position: top;">
+                <h3>Portfolio</h3>
+                <p>My own portfolio made with basic html, css and javascript</p>
+            </a>
+            <!--Unbeatable Tic-Tac-Toe cpp-->
+            <a class="card" href="https://github.com/henrique11varela/UnbeatableTicTacToeCpp">
+                <img src="images/projects/UnbeatableTicTacToeCpp.png" alt="Unbeatable Tic Tac Toe" style="object-position: top;">
+                <h3>miniMax Tic-Tac-Toe Cpp</h3>
+                <p>Built an AI in cpp with the miniMax algorithm</p>
+            </a>
+            <!--Unbeatable Tic-Tac-Toe js-->
+            <a class="card" href="https://henrique11varela.github.io/UnbeatableTicTacToeJS/">
+                <img src="images/projects/UnbeatableTicTacToeJS.png" alt="Unbeatable Tic Tac Toe" style="object-position: top;">
+                <h3>Unbeatable Tic-Tac-Toe JS</h3>
+                <p>An unbeatable tic-tac-toe AI built with simple html, css and javascript</p>
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <section id="jobs-screen">
+
+        <h2>Jobs</h2>
+
+        <h3>Factory operator</h3>
+        <p>Worked in a factory producing AC and power-assisted steering tubes, while at the same time fixing and maintaining machines like presses and robotic arms</p>
+        
+        <h3>Electrician's apprentice</h3>
+        <p>I followed the steps of an Electrician as an aprentice while studying code in my free time</p>
+        
+        <h3>Theater</h3>
+        <p>Six years of experience in acting on the local medieval fair</p>
+
+        <h3>Sound engineer</h3>
+        <p>Worked as a sound engineer with the group <em>Quadrilha Jograis</em></p>
+
+        <h3>Paginator and Graphic Designer</h3>
+        <p>I've worked in a journal project called <em>Varellápis</em> as a paginator and graphic designer with my
+            grandfather to send to political figures, media workers, friends and family by mail <br>
+            <span>Project download incoming</span>
+        </p>
+
+        <h3>Parfoir warehouse</h3>
+        <p>Worked at a Parfoir warehouse for the christmas period of 2020</p>
+
+        <h3>Stocktaking</h3>
+        <p>It was a one time job but i did stocktaking in 2020</p>
+
+        <h3>Burger King</h3>
+        <p>Made burgers for two weeks and gave up the oportunity while in experience period for health related
+            reasons in 2019</p>
+
+        <h3>Vr experience seller</h3>
+        <p>Sold virtual reality experiences in the middle of a shopping mall for two and a half months in 2018</p>
+
+
+    </section>
+
+    <div id="contact-screen"></div>
+
+    <footer>
+        <p>
+            <a href="mailto:henrique11varela@gmail.com?subject=Portfolio: " target="_blank">Email:
+                henrique11varela@gmail.com</a>
+        </p>
+        <p>
+            <a href="https://www.instagram.com/henriquevv11/" target="_blank">Instagram: @henriquevv11</a>
+        </p>
+        <p>Mobile: 935560176</p>
+        <p>
+            <a href="https://zerokyojin.itch.io/" target="_blank">Itch.io: Zerokyojin</a>
+        </p>
+        <p>
+            <a href="https://github.com/henrique11varela">Github: henrique11varela</a>
+        </p>
+        <p>Web Portfolio made by Henrique Varela</p>
+    </footer>
 
     <script src="scripts/app.js"></script>
 </body>

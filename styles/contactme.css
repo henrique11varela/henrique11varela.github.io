@@ -1,7 +1,7 @@
 @import "style.css";
 
 #contact-screen {
-    min-height: calc(100vh - 74px);
+    /*min-height: calc(100vh - 74px);*/
 }
 
 #contact-screen::before {

@@ -1,37 +1,10 @@
 @import "style.css";
 
-#contact-screen {
-    /*min-height: calc(100vh - 74px);*/
-}
-
 #contact-screen::before {
     content: "";
     width: 90vw;
     height: 5px;
     background-color: var(--color-2);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60vw;
-}
-
-form label {
-    font-size: 25px;
-    margin-top: 20px;
-    color: var(--color-2);
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 5px;
-    font-size: 20px;
-    color: var(--color-dark);
-    background-color: var(--color-2);
-    border: transparent 0px solid;
 }
 
 form input:focus,
@@ -61,14 +34,6 @@ footer a:hover {
 }
 
 @media (max-width: 650px) {
-
-    #contact-screen {
-        min-height: calc(100vh - 182px);
-    }
-
-    form {
-        width: 80vw;
-    }
 
     footer {
         display: flex;
